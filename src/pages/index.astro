@@ -1,4 +1,7 @@
 ---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
 import '../styles/global.css';
 
 const pageTitle = "index";
@@ -13,14 +16,14 @@ const pageTitle = "index";
 		<title>{pageTitle} | Astro Tutorial</title>
 	</head>
 	<body>
-    <nav>
-      <a href="/">{pageTitle}</a>
-      <a href="/about/">about</a>
-      <a href="/blog/">blog</a>
-    </nav>
+    <Header />
 		<h1>{pageTitle}</h1>
 		<p>ライブプレビューも出来るよ</p>
 		<p>Netlifyにコミットで自動ビルド！</p>
 		<p>変数pageTitleを定義して使ってみたよ</p>
+		<Footer />
+		<script>
+			import "../scripts/menu.js";
+		</script>
 	</body>
 </html>
