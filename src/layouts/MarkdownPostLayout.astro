@@ -1,0 +1,25 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+interface Props {
+  frontmatter: Frontmatter;
+}
+interface Frontmatter {
+  title: string;
+  pubDate: number;
+  description: string;
+  author: string;
+  image: Image;
+}
+interface Image {
+  url: string;
+  alt: string;
+}
+const {frontmatter} = Astro.props;
+---
+<BaseLayout pageTitle={frontmatter.title}>
+  <p>投稿日：{frontmatter.pubDate.toString().slice(0,10)}</p>
+  <p><em>{frontmatter.description}</em></p>
+  <p>著者：{frontmatter.author}</p>
+  <img src={frontmatter.image.url} alt={frontmatter.image.alt}>
+  <slot />
+</BaseLayout>

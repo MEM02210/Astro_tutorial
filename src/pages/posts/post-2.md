@@ -1,11 +1,12 @@
 ---
-title: 私の3番目のブログ記事
+layout: '@layouts/MarkdownPostLayout.astro'
+title: 私の2番目のブログ記事
 author: Astro学習者
-description: "上手くいかないことがありましたが、コミュニティに質問して助けてもらいました！"
+description: "Astroを少し学んだら、止まらなくなりました！"
 image:
-    url: "https://docs.astro.build/assets/rays.webp"
-    alt: "Astroの光線のサムネイル。"
-pubDate: 2022-07-15
-tags: ["astro", "公開学習", "後退", "コミュニティ"]
+    url: "https://docs.astro.build/assets/arc.webp"
+    alt: "Astroのアークのサムネイル。"
+pubDate: 2022-07-08
+tags: ["astro", "ブログ", "公開学習", "成功"]
 ---
-すべてがスムーズにいくわけではありませんでしたが、Astroで何かを作るのは楽しいです。そして、[Discordコミュニティ](https://astro.build/chat)は本当にフレンドリーで助けになります！
+Astroを学習し始めて最初の1週間が上手くいったので、もう少し試してみることにしました。小さなコンポーネントを書いてメモリーからインポートしました！

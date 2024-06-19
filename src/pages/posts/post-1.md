@@ -1,17 +1,14 @@
 ---
+layout: '@layouts/MarkdownPostLayout.astro'
 title: 'post-1.md'
 pubDate: 2024-06-19
 description: 'post-1.mdファイルをsrc/pages/postsディレクトに追加しました'
 author: 'tutorial'
 image:
-  url: 'https://docs.astro.build/assets/full-logo-light.png'
+  url: 'https://docs.astro.build/assets/full-logo-dark.png'
   alt: 'Astro ロゴ'
 tags: ["astro", "blog", tutorial]
 ---
-# post-1.md
-
-投稿日: 2022-07-01
-
 Astroの学習についての私の _新しいブログ_ へようこそ！ここでは、新しいウェブサイトを作りながら、私の学習過程を共有します。
 
 ## 達成したこと
