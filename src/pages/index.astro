@@ -1,5 +1,5 @@
 ---
-
+const pageTitle = "index";
 ---
 
 <html lang="ja">
@@ -8,16 +8,17 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>index | Astro Tutorial</title>
+		<title>{pageTitle} | Astro Tutorial</title>
 	</head>
 	<body>
     <nav>
-      <a href="/">index</a>
+      <a href="/">{pageTitle}</a>
       <a href="/about/">about</a>
       <a href="/blog/">blog</a>
     </nav>
-		<h1>Astro チュートリアル</h1>
-		<p>ホットリロードも出来るよ</p>
+		<h1>{pageTitle}</h1>
+		<p>ライブプレビューも出来るよ</p>
 		<p>Netlifyにコミットで自動ビルド！</p>
+		<p>変数pageTitleを定義して使ってみたよ</p>
 	</body>
 </html>

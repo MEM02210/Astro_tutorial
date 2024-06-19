@@ -1,5 +1,18 @@
 ---
+const pageTitle:string = "AboutAbout";
 
+const identity:Object = {
+	firstName: "Koju",
+	country: "Japan",
+	occupation: "Engineer",
+	hobbies: ["Baseball", "Horse Racing", "Game"],
+};
+
+const skills:Array<string> = ["HTML", "CSS", "JavaScript", "PHP", "React", "Astro"];
+
+const happy:boolean = true;
+const finished:boolean = false;
+const goal:number = 3;
 ---
 
 <html lang="ja">
@@ -8,15 +21,37 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>About | Astro Tutorial</title>
+		<title>{pageTitle} | Astro Tutorial</title>
 	</head>
 	<body>
     <nav>
       <a href="/">index</a>
-      <a href="/about/">about</a>
+      <a href="/about/">{pageTitle}</a>
       <a href="/blog/">blog</a>
     </nav>
-		<h1>About</h1>
-		<p>src/pages/にAbout.astroファイルを追加したよ</p>
+		<h1>{pageTitle}</h1>
+		<div>
+			<h2>変更ログ</h2>
+			<p>src/pages/にAbout.astroファイルを追加したよ</p>
+			<p>フロントマターのコードフェンス（---）にJavaScriptの変数を追加したよ</p>
+		</div>
+		<div>
+			<h2>コンテンツ</h2>
+			<p>以下は私に関するいくつかの事実です。</p>
+			<ul>
+				<li>私の名前は{identity.firstName}です。</li>
+				<li>{identity.country}に住んでおり、{identity.occupation}として働いています。</li>
+				{identity.hobbies.length >= 2 &&
+					<li>私の2つの趣味は{identity.hobbies[0]}と{identity.hobbies[1]}です。</li>
+				}
+			</ul>
+			<p>私のスキルは以下の通りです。</p>
+			<ul>
+				{skills.map((skill) => <li>{skill}</li>)}
+			</ul>
+			{happy && <p>I am happy to be learning Astro! Astroを学べて幸せです！</p>}
+			{finished && <p>I finished this tutorial! このチュートリアルを終えました！</p>}
+			{goal === 3 ? <p>My goal is to finish in 3 days. 3日で終えるのが目標です。</p> : <p>My goal is not 3 days. 3日が目標ではありません。</p>}
+		</div>
 	</body>
 </html>
