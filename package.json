@@ -1,16 +1,19 @@
 {
-  "name": "",
+  "name": "Astro Tutorial",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro check && astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.10.3"
+    "@astrojs/check": "^0.7.0",
+    "@astrojs/ts-plugin": "^1.8.0",
+    "astro": "^4.10.3",
+    "typescript": "^5.4.5"
   },
   "volta": {
     "node": "20.14.0",
