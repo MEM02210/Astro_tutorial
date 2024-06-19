@@ -1,18 +1,25 @@
 ---
-const pageTitle:string = "AboutAbout";
+const pageTitle: string = "AboutAbout";
 
-const identity:Object = {
+const identity: Identity = {
 	firstName: "Koju",
 	country: "Japan",
 	occupation: "Engineer",
 	hobbies: ["Baseball", "Horse Racing", "Game"],
 };
 
-const skills:Array<string> = ["HTML", "CSS", "JavaScript", "PHP", "React", "Astro"];
+interface Identity {
+	firstName: string;
+	country: string;
+	occupation: string;
+	hobbies: Array<string>;
+}
 
-const happy:boolean = true;
-const finished:boolean = false;
-const goal:number = 3;
+const skills: Array<string> = ["HTML", "CSS", "JavaScript", "PHP", "React", "Astro"];
+
+const happy: boolean = true;
+const finished: boolean = false;
+const goal: number = 3;
 ---
 
 <html lang="ja">
@@ -47,7 +54,7 @@ const goal:number = 3;
 			</ul>
 			<p>私のスキルは以下の通りです。</p>
 			<ul>
-				{skills.map((skill) => <li>{skill}</li>)}
+				{skills.map((skill: string) => <li>{skill}</li>)}
 			</ul>
 			{happy && <p>I am happy to be learning Astro! Astroを学べて幸せです！</p>}
 			{finished && <p>I finished this tutorial! このチュートリアルを終えました！</p>}
