@@ -7,7 +7,7 @@ author: 'tutorial'
 image:
   url: 'https://docs.astro.build/assets/full-logo-dark.png'
   alt: 'Astro ロゴ'
-tags: ["astro", "blog", tutorial]
+tags: ["astro", "ブログ", "公開学習"]
 ---
 Astroの学習についての私の _新しいブログ_ へようこそ！ここでは、新しいウェブサイトを作りながら、私の学習過程を共有します。
 
