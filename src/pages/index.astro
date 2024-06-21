@@ -1,9 +1,14 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
+import Greeting from "@components/Greeting";
 
 const pageTitle: string = "index";
 ---
 <BaseLayout pageTitle={pageTitle}>
+	<div>
+    <h2>コンテンツ</h2>
+    <Greeting client:load messages={["どうも", "こんにちは", "初めまして", "ようこそ"]} />
+  </div>
 	<div>
 		<h2>変更ログ</h2>
 		<p>ライブプレビューも出来るよ</p>

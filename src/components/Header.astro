@@ -1,14 +1,19 @@
 ---
 import Navigation from './Navigation.astro';
 import Hamburger from './Hamburger.astro';
+import ThemeIcon from './ThemeIcon.astro';
 ---
 <header>
   <Hamburger />
+  <ThemeIcon />
   <Navigation />
 </header>
 
 <style>
   header {
     background-color: #eee;
+  }
+  :global(:where(.dark)) header {
+    background-color: #333;
   }
 </style>
